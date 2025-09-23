@@ -194,3 +194,40 @@ In abstract classes: Must write public abstract void method();
 All interface methods are public - they define contracts for external use
 All traditional interface methods are abstract - no implementation body
 
+More about Interface:
+
+
+Java Interface - Brief Notes
+What is an Interface?
+An interface is a contract that defines what methods a class must implement, but doesn't provide the implementation itself.
+Key Features:
+
+Pure abstraction - only method signatures (no implementation)
+Multiple inheritance - a class can implement multiple interfaces
+All methods are implicitly public abstract
+Variables are implicitly public static final (constants only)
+Cannot be instantiated directly
+
+
+Basic Syntax:
+interface InterfaceName {
+    // Abstract methods (implicitly public abstract)
+    void method1();
+    int method2(String param);
+    
+    // Constants (implicitly public static final)
+    int CONSTANT_VALUE = 100;
+}
+
+// Implementing interface
+class MyClass implements InterfaceName {
+    @Override
+    public void method1() {
+        System.out.println("Implementation of method1");
+    }
+    
+    @Override
+    public int method2(String param) {
+        return param.length();
+    }
+}
